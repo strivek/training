@@ -1,0 +1,129 @@
+$width:700px;
+.con{ width:$width; height:100px; background: green; line-height: 100px; text-align: center;}
+
+$con-text:(f-size:12px,
+           t-color:#333,
+           bg-color:blue,
+           m-bottom:20px,
+           b-width:600px,
+           b-height:50px,
+           t-align:center,
+           l-height:50px
+);
+
+
+.title{ margin:map_get($con-text,m-bottom);
+        width:map_get($con-text,b-width);
+        background:map_get($con-text,bg-color);
+        line-height:map_get($con-text,l-height);
+        text-align:map_get($con-text,t-align);
+        color:map_get($con-text,t-color);
+
+        @if map_has_key($con-text,t-size){
+           font-size:map_get($con-text,t-size);
+             }
+        @else{
+            font-size:map_get($con-text,f-size);
+
+            }
+}
+
+.title1{@extend .title;}
+
+$div-text:(font-size:12px,
+        color:#889898,
+        background-color:pink,
+        margin-bottom:20px,
+        width:900px,
+        height:60px,
+        text-align:center,
+        line-height:60px
+);
+
+@function lis($con,$list){
+   @if map_has_key($con,$list) {
+     @return map_get($con, $list);
+   }
+     @else{@warn "no color";}
+
+}
+.m-fun-div{
+  @each $shx,$value in $div-text{
+
+    #[$shx]:lis($div-text,$value);
+
+     }
+}
+
+
+
+$a-color: red green;
+.lin{ color:nth($a-color,1);
+    &:hover{color: nth($a-color,2);
+  }
+
+}
+
+
+/* */
+
+@mixin border($border,$bg){
+  border:$border;
+  background: $bg;
+}
+.m-ul{ width:500px;
+       height:100px;
+       background: #eee;
+       color:red;
+       @include border(3px solid black,#674646);
+
+       ul{background: #979787;
+          width: 400px;
+         list-style: none;
+         height:50px;
+     @at-root & li{
+             font-size:15px;
+            }
+
+       }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
