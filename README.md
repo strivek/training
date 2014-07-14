@@ -1,6 +1,8 @@
 #工作规范与参考文档
 ==================
 
+This is [an example] [id] reference-style link.
+
 ##Git 日常工作流程
 
 1. 项目开始
@@ -52,7 +54,7 @@
 
 `git branch -b [分支名]` 新建一个分支并且切换到新建的分支，对于已有分支无效
 
-![img_20140703_114401](https://cloud.githubusercontent.com/assets/5283656/3567118/9bb67aba-0b0f-11e4-9cf3-370fb123df34.jpg)
+[id]: http://example.com/  "Optional Title Here"
 
 
 
