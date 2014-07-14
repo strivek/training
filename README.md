@@ -54,7 +54,7 @@
 `git branch -b [分支名]` 新建一个分支并且切换到新建的分支，对于已有分支无效
 
 
-[回到首页](#Git 日常工作流程)
+[回到首页](#https://github.com/strivek/training/blob/master/README.md#%E5%B7%A5%E4%BD%9C%E8%A7%84%E8%8C%83%E4%B8%8E%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3)
 
 
 
